@@ -1,88 +1,25 @@
-* {
-  box-sizing: border-box;
+html{
+  background-color: #17d2e4;
 }
 
-body {
-  color: #8f8f8f;
-  background: white;
-  font-family: "Oswald", serif;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  padding: 0;
-  margin: 0;
-}
 
-a {
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 30px;
-  line-height: 1.8;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-}
-
-p {
-  margin-bottom: 20px;
-  font-size: 17px;
-  line-height: 2;
-}
-.row {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 2%;
-}
-.content {
-  max-width: 940px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 50px 2% 50px;
-}
-.main_header .row .content {padding: 0;}
-.dark {background:#333;}
-#hero {
-  position: relative;
-  background: url(http://fillmurray.com/1280/850) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  text-align: center;
-  color: #fff;
-  padding-top: 110px;
-  min-height: 500px;
-  letter-spacing: 2px;
-  font-family: "Oswald", sans-serif;
-}
-#hero h1 {
-  font-size: 50px;
-  line-height: 1.3;
-}
-#hero h1 span {
-  font-size: 25px;
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 12px;
-  line-height: 3;
-}
-.main_header {
+.main_h {
   position: fixed;
-  top: 0px;
   max-height: 70px;
   z-index: 999;
   width: 100%;
   padding-top: 17px;
   background: none;
   overflow: hidden;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @media only screen and (max-width: 766px) {
-  .main_header {
+  .main_h {
     padding-top: 25px;
   }
 }
@@ -92,13 +29,14 @@ p {
 }
 .open-nav .mobile-toggle {
   transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
 }
 
 .sticky {
-  background-color: rgba(255, 255, 255, 0.93);
+  background-color: #fff;
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid gainsboro;
 }
 
 .logo {
@@ -158,15 +96,8 @@ nav ul a {
   color: #888888;
   text-transform: uppercase;
   font-size: 12px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  transition: all 500ms linear;
 }
-nav ul a.active {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  transition: all 500ms 100ms linear;
-}
+
 .mobile-toggle {
   display: none;
   cursor: pointer;
@@ -175,6 +106,8 @@ nav ul a.active {
   right: 22px;
   top: 0;
   width: 30px;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
 @media only screen and (max-width: 766px) {
@@ -190,19 +123,87 @@ nav ul a.active {
   background: #8f8f8f;
   display: block;
 }
+
+.row {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #8f8f8f;
+  background: white;
+  font-family: "Cardo", serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 2;
+  text-align: justify;
+}
+
+.content {
+  padding: 50px 2% 250px;
+}
+
+.hero {
+  position: relative;
+  background: #333 url(http://srdjanpajdic.com/slike/2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding-top: 110px;
+  min-height: 500px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.hero h1 {
+  font-size: 50px;
+  line-height: 1.3;
+
+}
+.hero h1 span {
+  font-size: 25px;
+  color: #17d2e4;
+  border-bottom: 2px solid #17d2e4;
+  padding-bottom: 12px;
+  line-height: 3;
+}
+
 .mouse {
   display: block;
   margin: 0 auto;
   width: 26px;
   height: 46px;
-  background: rgba(255,255,255,0.5);
   border-radius: 13px;
-  border: 2px solid #ffffff;
+  border: 2px solid #17d2e4;
+  bottom: 40px;
   position: absolute;
-  bottom: 95px;
-  position: absolute;
-  left: 51%;
-  margin-left: -24px;
+  left: 50%;
+  margin-left: -14px;
 }
 .mouse span {
   display: block;
@@ -210,34 +211,132 @@ nav ul a.active {
   width: 2px;
   height: 2px;
   border-radius: 4px;
-  background: #ffffff;
+  background: #17d2e4;
   border: 1px solid transparent;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
   animation-name: scroll;
 }
 
-@keyframes scroll {
+@-webkit-keyframes scroll {
   0% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
   100% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
 }
-.scrollup {
-    color: rgba(0,0,0,0.3);
-    font-size: 40px;
-    text-align: center;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    display: none;
-    bottom: 50px;
-    right: 100px;
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+.sec01{
+  margin-top: 30px;
+}
+
+.sec02{
+  margin-top: 30px;
+}
+
+.sec03{
+  margin-top: 30px;
+}
+
+.sec04{
+  margin-top: 30px;
+}
+
+.sec05{
+  margin-top: 30px;
+}
+
+.arrow {
+ position: fixed;
+ bottom: 4%;
+ right: 4%;
+ margin-left:-20px;
+}
+.arrow:before,
+.arrow:after{
+ content: '';
+ position: fixed;
+ top: 0;
+ right: -24px;
+ width: 30px;
+ height: 3px;
+ border-radius: 10px;
+ display: block;
+ background: #17d2e4;
+ transform:rotate(45deg);
+ -webkit-transform:rotate(45deg);
+}
+.arrow:after{
+ right: inherit;
+ left: -24px;
+ transform:rotate(-45deg);
+ -webkit-transform:rotate(-45deg);
+}
+
+.animated{
+ -webkit-animation: bounce 3s infinite;
+ animation: bounce 3s both infinite;
+}
+
+
+@-webkit-keyframes bounce {
+ 0% {-webkit-transform: translateY(0); opacity: 0;}
+ 60% { opacity: 1;}
+ 100% {-webkit-transform: translateY(-60px); opacity: 0}
+}
+
+@-moz-keyframes bounce {
+ 0% {-webkit-transform: translateY(0); opacity: 0;}
+ 60% { opacity: 1;}
+ 100% {-webkit-transform: translateY(-60px); opacity: 0}
+}
+
+@-o-keyframes bounce {
+ 0% {-webkit-transform: translateY(0); opacity: 0;}
+ 60% { opacity: 1;}
+ 100% {-webkit-transform: translateY(-60px); opacity: 0}
+}
+@keyframes bounce {
+ 0% {-webkit-transform: translateY(0); opacity: 0;}
+ 60% { opacity: 1;}
+ 100% {-webkit-transform: translateY(-60px); opacity: 0}
+}
+
+#aaa{
+  background-image: url(../images/aaa.jpg);
+  opacity: 0.7;
+}
+
+#bbb{
+  background-image: url(../images/bbb.jpg);
+  opacity: 0.7;
+}
+
+#ggg{
+  background-image: url(../images/ggg.jpg);
+  opacity: 0.7;
 }
